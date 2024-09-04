@@ -1,0 +1,243 @@
+/* Estilos generales del cuerpo de la página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #8c51bd;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Contenedor principal que organiza la disposición en flexbox */
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: space-evenly;
+}
+
+/* CUADRO 1 */
+/* Estilos para la barra lateral izquierda */
+.sidebar {
+  margin: 20px;
+  width: 20%;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.texto {
+  color: #585457;
+}
+
+.sidebar h2 {
+  color: #888888;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Estilo para la lista de navegación */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: #533269;
+  text-decoration: none;
+  font-size: 1.1em;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+/* Sección de perfil dentro de la barra lateral */
+.profile {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.profile img {
+  width: 170px;
+  border-radius: 20%;
+}
+
+.profile h4 {
+  margin-top: 10px;
+}
+
+/* CUADRO 2 */
+/* Estilos para el contenido principal */
+.content {
+  margin: 20px;
+  padding: 40px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para la sección de detalle del perfil */
+.profile-detail {
+  text-align: center;
+  font-size: 25px;
+}
+
+.texto1 {
+  color: #585457;
+}
+
+.texto2 {
+  font-size: 25px;
+  color: #585457;
+}
+
+.profile-detail img {
+  width: 380px;
+  border-radius: 20px;
+  border: 2px solid #b9b7af;
+}
+
+/* CUADRO 3 */
+/* Estilos para la barra lateral derecha */
+.sidebar-right {
+  margin: 20px;
+  width: 25%;
+  padding: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+hr {
+  color: #585457;
+  margin: 5px 0;
+}
+
+.sidebar-right h3 {
+  text-align: center;
+  margin: 15px 0;
+  color: #53555b;
+}
+
+.sidebar-right p {
+  text-align: center;
+  margin: 15px 0;
+  color: #afb2b5;
+  font-family: Javi;
+  font-weight: 100;
+}
+
+/* Lista de colaboradores */
+.sidebar-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-right ul li {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.sidebar-right ul li div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para las imágenes de los colaboradores */
+.sidebar-right ul li img {
+  width: 90px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Estilo para los items de la lista de colaboradores */
+.sidebar-right ul li {
+  padding: 5px 0;
+}
+
+.litexto {
+  font-size: 0.85em;
+  margin: 0;
+}
+
+.sidebar-right p {
+  font-size: 0.85em;
+  margin: 0;
+}
+
+/* Media queries para dispositivos pequeños */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .content {
+    order: 1;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+  }
+
+  .sidebar {
+    order: 2;
+    width: 50%;
+    max-width: 400px;
+    margin: 20px 0;
+  }
+
+  .sidebar-right {
+    order: 3;
+    width: 130%;
+    max-width: 400px;
+    margin: 10px 0;
+  }
+
+  .profile img,
+  .profile-detail img {
+    width: 200px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cards se envuelvan a la siguiente línea si es necesario */
+    padding: 10px;
+  }
+
+  .content {
+    order: 1;
+    width: 900%;
+    max-width: 500px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar,
+  .sidebar-right {
+    order: 2;
+    width: 200%;
+    max-width: 300px;
+    margin: 10px; /* Las cards 1 y 3 ocupan más espacio */
+  }
+
+  .profile img,
+  .profile-detail img {
+    width: 100%;
+    max-width: 250px;
+  }
+  .profile-detail h2 {
+    font-size: 1.5em;
+  }
+}
